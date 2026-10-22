@@ -1,0 +1,8 @@
+{
+  "name": "MG Abogados \u0026 Bienes Raíces | Bufete Jurídico",
+  "description": "Despacho jurídico especializado en Derecho Penal, Bienes Raíces, Litigación y Asesoría Corporativa en Panamá, dirigido por la Licda. Mitzy I. García.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
