@@ -4,21 +4,21 @@ import { TEAM_IMAGES } from '../assets/teamImages';
 export const ATTORNEY_PROFILE = {
   name: 'Licda. Mitzy I. García',
   title: 'Directora & Fundadora | Abogada Litigante',
-  credentials: 'Exfiscal del Ministerio Público de Panamá · Especialista en Tierras, Bienes Raíces & Litigación Penal',
+  credentials: 'Exfiscal del Ministerio Público de Panamá · Especialista en Titulación de Tierras, Bienes Raíces, Contratos & Defensa Penal',
   photo: TEAM_IMAGES.mitzy,
   experienceYears: 15,
   publicProsecutorYears: 10,
   bio: [
     'El despacho es dirigido por la Licda. Mitzy I. García, abogada panameña con una sólida trayectoria en el ámbito jurídico. Antes de ejercer de forma independiente, desarrolló su carrera profesional durante aproximadamente diez años en el Ministerio Público de Panamá, institución en la cual participó activamente en la investigación de hechos delictivos y en el desarrollo de procesos judiciales, llegando a desempeñar funciones dentro del sistema de persecución penal incluyendo el ejercicio del cargo de fiscal.',
-    'Esta experiencia dentro del sistema de justicia le permitió adquirir un profundo conocimiento del funcionamiento de los procesos judiciales, la valoración de pruebas, la dinámica de las investigaciones penales y el manejo estratégico de los casos dentro de los tribunales.',
-    'Posteriormente, inició el ejercicio profesional independiente, dedicándose a la asesoría jurídica y a la representación de clientes en diversas áreas del derecho, desarrollando una práctica enfocada en la litigación, la solución de conflictos y la protección de los intereses de las personas y empresas.',
-    'MG Abogados & Consultores tiene como objetivo ofrecer a cada cliente una atención directa, transparente y profesional, analizando cada caso con seriedad y planteando estrategias legales adecuadas a las circunstancias particulares de cada situación, con especial énfasis en la seguridad de sus tierras, patrimonio inmobiliario y defensa penal efectiva.'
+    'Esta trayectoria dentro del sistema de justicia le permitió consolidar una defensa penal estratégica de primer nivel, basada en el dominio profundo de los procesos judiciales, la valoración probatoria, la dinámica de las investigaciones penales y el litigio efectivo en audiencias ante los tribunales.',
+    'En el ejercicio independiente, la Licda. Mitzy I. García sobresale por su liderazgo especializado en Titulación de Tierras ante la ANATI y regularización de derechos posesorios, Bienes Raíces y debida diligencia registral de fincas, así como en la redacción, negociación y blindaje jurídico de Contratos civiles, inmobiliarios y comerciales.',
+    'MG Abogados & Consultores tiene como objetivo ofrecer a cada cliente una atención directa, transparente y profesional, analizando cada caso con seriedad para garantizar la protección de sus tierras, bienes raíces, contratos y una defensa penal rigurosa.'
   ],
   principles: [
-    { title: 'Responsabilidad & Rigor', desc: 'Análisis minucioso de cada expediente con estrategias jurídicas a la medida de la situación.' },
-    { title: 'Ética & Confidencialidad', desc: 'Protección absoluta del secreto profesional y lealtad irrestricta a los intereses del cliente.' },
-    { title: 'Dominio de los Tribunales', desc: 'Vasto conocimiento práctico del Sistema Penal Acusatorio (SPA) y la dinámica de audiencias.' },
-    { title: 'Compromiso con la Justicia', desc: 'Acompañamiento cercano y oportuno a personas naturales y corporaciones.' }
+    { title: 'Titulación de Tierras', desc: 'Gestión integral ante ANATI, adjudicaciones, planos y regularización de derechos posesorios en Panamá.' },
+    { title: 'Bienes Raíces & Registro', desc: 'Auditoría registral de fincas (Due Diligence), segregaciones, P.H. y seguridad inmobiliaria.' },
+    { title: 'Contratos & Blindaje Legal', desc: 'Redacción y revisión de contratos de promesa y compraventa, arrendamientos y acuerdos mercantiles.' },
+    { title: 'Defensa Penal Estratégica', desc: 'Más de 10 años de experiencia exfiscal en el Sistema Penal Acusatorio (SPA) y litigación oral.' }
   ],
   officeAddress: 'Torre Financial Park, Piso 18, Costa del Este / Calle 50, Ciudad de Panamá',
   phones: {
@@ -34,11 +34,16 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: 'mitzy-garcia',
     name: 'Licda. Mitzy I. García',
     role: 'Socia Directora & Fundadora',
-    specialty: 'Tierras, Bienes Raíces, Litigación & Derecho Penal',
+    specialty: 'Titulación de Tierras, Bienes Raíces, Contratos & Defensa Penal',
     experienceTag: 'Exfiscal del Ministerio Público de Panamá (10 años)',
     image: TEAM_IMAGES.mitzy,
-    bio: 'Abogada panameña con sólida trayectoria en el ámbito jurídico. Durante aproximadamente diez años en el Ministerio Público de Panamá participó activamente en la investigación de hechos delictivos y procesos judiciales, ejerciendo funciones dentro de la persecución penal y el cargo de fiscal. Especialista en titulación y saneamiento de tierras, protección registral de fincas, transacciones inmobiliarias y litigación penal estratégica.',
-    keyAreas: ['Titulación de Tierras y ANATI', 'Due Diligence Registral', 'Sistema Penal Acusatorio (SPA)', 'Litigio y Audiencias']
+    bio: 'Abogada panameña con sólida trayectoria y aproximadamente diez años en el Ministerio Público de Panamá ejerciendo funciones de persecución penal y el cargo de fiscal. Sobresale por su práctica especializada en Titulación de Tierras ante ANATI y derechos posesorios, Bienes Raíces y auditoría registral de fincas, redacción y blindaje de Contratos inmobiliarios y comerciales, y Defensa Penal estratégica en todas las fases del Sistema Penal Acusatorio.',
+    keyAreas: [
+      'Titulación de Tierras (ANATI)',
+      'Bienes Raíces & Registro Público',
+      'Contratos & Blindaje Jurídico',
+      'Defensa Penal (SPA)'
+    ]
   },
   {
     id: 'adelberto-ortega',

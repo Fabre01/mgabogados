@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Shield, Award, Building, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Calendar, Shield, Award, Building, ArrowRight, CheckCircle2, FileText } from 'lucide-react';
 import { ATTORNEY_PROFILE, TEAM_MEMBERS } from '../data/legalData';
 import { Logo } from './Logo';
 import { useMitzyPhoto } from '../hooks/useMitzyPhoto';
@@ -26,9 +26,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
           <div className="lg:col-span-7 space-y-7 text-left">
             
             {/* Top Credential Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs text-[#E0C097]">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-[#C5A880]/40 text-xs text-white">
               <Award className="w-4 h-4 text-[#D4AF37]" />
-              <span className="font-medium tracking-wide">
+              <span className="font-medium tracking-wide text-white">
                 Experiencia Exfiscal · Más de 10 años en el Ministerio Público
               </span>
             </div>
@@ -36,34 +36,34 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
             {/* Headline */}
             <h1 className="font-serif-legal text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.18]">
               Seguridad Jurídica en{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E0C097] via-[#D4AF37] to-[#B38A4D]">
-                Tierras &amp; Bienes Raíces
+              <span className="underline decoration-[#C5A880] decoration-2 underline-offset-4 text-white">
+                Titulación de Tierras, Bienes Raíces, Contratos
               </span>{' '}
               y Defensa Penal en Panamá
             </h1>
 
-            {/* Lead Description directly based on user's document */}
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
-              Despacho jurídico enfocado en brindar asesoría legal responsable, estratégica y comprometida con la defensa de sus derechos y patrimonio. Dirigido por la <strong className="text-white font-semibold">Licda. Mitzy I. García</strong>, abogada panameña con profundo dominio en titulación de tierras ante ANATI, regularización de derechos posesorios, debida diligencia registral de fincas y litigación penal.
+            {/* Lead Description */}
+            <p className="text-white text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+              Despacho jurídico enfocado en brindar asesoría legal responsable, estratégica y comprometida con la defensa de sus derechos y patrimonio. Dirigido por la <strong className="text-white font-semibold">Licda. Mitzy I. García</strong>, abogada panameña con profundo dominio en titulación de tierras ante ANATI, bienes raíces, redacción y blindaje de contratos, y defensa penal estratégica.
             </p>
 
             {/* Quick Guarantees / Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-sm text-slate-300">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-sm text-white">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
-                <span>Atención directa y transparente</span>
+                <span>Titulación de tierras ante ANATI y posesorios</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
-                <span>Estrategias a la medida de cada caso</span>
+                <span>Bienes raíces y auditoría registral de fincas</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
-                <span>Titulación de tierras y auditoría de fincas</span>
+                <span>Contratos inmobiliarios, civiles y mercantiles</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
-                <span>Modalidad Presencial y Virtual internacional</span>
+                <span>Defensa penal técnica · Presencial y Virtual</span>
               </div>
             </div>
 
@@ -80,14 +80,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
 
               <a
                 href="#servicios"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg border border-slate-700 hover:border-slate-500 bg-slate-900/50 hover:bg-slate-800/80 text-slate-200 font-medium text-sm transition-all"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg border border-slate-600 hover:border-[#C5A880] bg-slate-900/60 hover:bg-slate-800/80 text-white font-medium text-sm transition-all"
               >
                 Explorar Servicios
               </a>
 
               <button
                 onClick={onOpenCaseEvaluator}
-                className="text-xs text-amber-200/80 hover:text-amber-100 underline underline-offset-4 sm:ml-2 text-center"
+                className="text-xs text-white hover:text-[#E0C097] underline underline-offset-4 sm:ml-2 text-center cursor-pointer"
               >
                 ¿Dudas sobre su caso? Evaluar aquí
               </button>
@@ -112,10 +112,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
                   <span className="text-[#D4AF37] font-bold">★★★★★</span>
                 </div>
                 <div className="flex items-center gap-2 mt-0.5">
-                  <span className="text-slate-400 text-[11px]">
+                  <span className="text-white/90 text-[11px]">
                     4 abogados especialistas colegiados en Panamá
                   </span>
-                  <a href="#equipo" className="text-[11px] text-[#C5A880] hover:underline font-medium">
+                  <a href="#equipo" className="text-[11px] text-white hover:text-[#E0C097] underline font-medium">
                     Conocer al equipo →
                   </a>
                 </div>
@@ -127,7 +127,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
           {/* Right Column: Founder Authority Card & Quick Stats */}
           <div className="lg:col-span-5">
             <div
-              className="relative bg-gradient-to-b from-slate-800/90 to-slate-900/95 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-sm"
+              className="relative bg-gradient-to-b from-slate-800/90 to-slate-900/95 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-sm text-white"
             >
               {/* Gold Accent Corner */}
               <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#C5A880]/20 to-transparent rounded-tr-2xl pointer-events-none" />
@@ -153,17 +153,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-widest text-[#C5A880] font-semibold">
+                  <div className="text-xs uppercase tracking-widest text-white/90 font-semibold">
                     Directora &amp; Socia Fundadora
                   </div>
                   <h3 className="font-serif-legal text-xl font-bold text-white mt-0.5">
                     Licda. Mitzy I. García
                   </h3>
-                  <p className="text-xs text-slate-300 mt-1 leading-snug">
+                  <p className="text-xs text-white/90 mt-1 leading-snug">
                     Abogada Litigante · Exfiscal del Ministerio Público de Panamá
                   </p>
-                  <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#C5A880]/15 border border-[#C5A880]/30 text-[10px] text-[#E0C097] font-semibold tracking-wider uppercase">
-                    Especialista en Tierras, Bienes Raíces &amp; Litigación Penal
+                  <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#C5A880]/20 border border-[#C5A880]/50 text-[10px] text-white font-semibold tracking-wider uppercase">
+                    Titulación de Tierras · Bienes Raíces · Contratos · Defensa Penal
                   </div>
                 </div>
               </div>
@@ -172,46 +172,46 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
               <div className="py-5 space-y-3.5 text-sm">
                 <div className="flex items-start gap-3">
                   <div className="w-7 h-7 rounded-md bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 mt-0.5 text-[#C5A880]">
-                    <Shield className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="font-semibold text-white block">10 Años en Persecución Penal</span>
-                    <span className="text-xs text-slate-300">
-                      Investigación activa de hechos delictivos y dirección de procesos judiciales en fiscalía.
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-md bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 mt-0.5 text-[#C5A880]">
                     <Building className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="font-semibold text-white block">Tierras, Titulación &amp; Bienes Raíces</span>
-                    <span className="text-xs text-slate-300">
-                      Titulación ante ANATI, regularización de derechos posesorios, due diligence de fincas y transacciones seguras en Panamá.
+                    <span className="font-semibold text-white block">Titulación de Tierras &amp; Bienes Raíces</span>
+                    <span className="text-xs text-white/90">
+                      Titulación ante ANATI, regularización de derechos posesorios, auditoría registral de fincas y transacciones seguras en Panamá.
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-7 h-7 rounded-md bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 mt-0.5 text-[#C5A880]">
-                    <Award className="w-4 h-4" />
+                    <FileText className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="font-semibold text-white block">Práctica de Litigación &amp; Confianza</span>
-                    <span className="text-xs text-slate-300">
-                      Solución estratégica de conflictos para personas naturales y corporaciones.
+                    <span className="font-semibold text-white block">Contratos &amp; Blindaje Patrimonial</span>
+                    <span className="text-xs text-white/90">
+                      Redacción, revisión y negociación de contratos de promesa y compraventa, arrendamientos y acuerdos comerciales.
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded-md bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 mt-0.5 text-[#C5A880]">
+                    <Shield className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="font-semibold text-white block">Defensa Penal · 10 Años Exfiscal</span>
+                    <span className="text-xs text-white/90">
+                      Investigación penal, audiencias de garantías y litigio estratégico en todas las etapas del Sistema Penal Acusatorio.
                     </span>
                   </div>
                 </div>
               </div>
 
               {/* Direct Booking Highlight Box */}
-              <div className="bg-[#0A1420]/80 rounded-xl p-4 border border-amber-900/30 flex items-center justify-between">
+              <div className="bg-[#0A1420]/80 rounded-xl p-4 border border-[#C5A880]/40 flex items-center justify-between">
                 <div>
-                  <div className="text-xs text-slate-400">¿Requiere orientación inmediata?</div>
-                  <div className="text-sm font-semibold text-[#E0C097]">
+                  <div className="text-xs text-white/80">¿Requiere orientación inmediata?</div>
+                  <div className="text-sm font-semibold text-white">
                     Agenda disponible para esta semana
                   </div>
                 </div>
