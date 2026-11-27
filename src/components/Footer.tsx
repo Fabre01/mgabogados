@@ -107,10 +107,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenLookup }) =
           </p>
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2 pt-2 text-white/90">
             <div>
-              &copy; {new Date().getFullYear()} MG Abogados &amp; Consultores · Tierras &amp; Bienes Raíces · Licda. Mitzy I. García. Todos los derechos reservados.
+              &copy; 2026 Fabre Technology. Todos los derechos reservados.
             </div>
             <div className="text-[11px] text-white/80">
-              Ciudad de Panamá, República de Panamá
+              Provincia de Colón, República de Panamá
             </div>
           </div>
         </div>

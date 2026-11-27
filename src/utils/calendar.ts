@@ -32,7 +32,7 @@ export function generateICSContent(apt: Appointment): string {
 
   const location =
     apt.modality === 'presencial'
-      ? 'Despacho MG Abogados: Torre Financial Park, Costa del Este / Calle 50, Ciudad de Panamá'
+      ? 'Despacho MG Abogados: Provincia de Colón, a un costado de la Junta Comunal de Buena Vista'
       : 'Videollamada en vivo (Enlace se enviará a su correo: Google Meet / Zoom)';
 
   return [
@@ -42,7 +42,7 @@ export function generateICSContent(apt: Appointment): string {
     'CALSCALE:GREGORIAN',
     'METHOD:REQUEST',
     'BEGIN:VEVENT',
-    `UID:${apt.code}@mgabogadospanama.com`,
+    `UID:${apt.code}@mglegalpa.com`,
     `DTSTAMP:${formatICSDate(new Date())}`,
     `DTSTART:${startStr}`,
     `DTEND:${endStr}`,
@@ -94,7 +94,7 @@ export function generateGoogleCalendarUrl(apt: Appointment): string {
   );
   const location = encodeURIComponent(
     apt.modality === 'presencial'
-      ? 'Torre Financial Park, Costa del Este / Calle 50, Ciudad de Panamá'
+      ? 'Provincia de Colón, a un costado de la Junta Comunal de Buena Vista'
       : 'Enlace Virtual Google Meet'
   );
 
@@ -105,5 +105,5 @@ export function generateWhatsAppConfirmationUrl(apt: Appointment): string {
   const text = encodeURIComponent(
     `Hola Licda. Mitzy García / Despacho MG Abogados,\nHe registrado la cita con código *${apt.code}* a nombre de *${apt.fullName}* para el día *${apt.date}* a las *${apt.timeSlot}* (${apt.modality === 'presencial' ? 'Presencial' : 'Virtual'}). Deseo confirmar los detalles. ¡Gracias!`
   );
-  return `https://wa.me/50762348890?text=${text}`;
+  return `https://wa.me/50761654038?text=${text}`;
 }

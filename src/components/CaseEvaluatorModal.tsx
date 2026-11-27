@@ -225,7 +225,7 @@ export const CaseEvaluatorModal: React.FC<CaseEvaluatorModalProps> = ({
                   <div>
                     <span className="font-bold block">Urgencia Máxima Detectada</span>
                     <span>
-                      Si existe una orden de aprehensión o una audiencia inminente, comuníquese directamente a nuestra línea de urgencia: <a href="tel:+50769801122" className="underline font-bold">+507 6980-1122</a>.
+                      Si existe una orden de aprehensión o una audiencia inminente, comuníquese directamente a nuestra línea de urgencia: <a href="tel:+50761654038" className="underline font-bold">+507 6165-4038</a>.
                     </span>
                   </div>
                 </div>

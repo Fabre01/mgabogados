@@ -13,56 +13,55 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, onOpenPhotoUploader }) => {
   const mitzyPhoto = useMitzyPhoto();
   return (
-    <section id="inicio" className="relative bg-[#0D1B2A] text-white pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
-      {/* Background Architectural Watermark & Gradients */}
-      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#c5a880_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
-      <div className="absolute -top-32 right-0 w-[550px] h-[550px] bg-gradient-to-bl from-[#c5a880]/15 via-[#1b263b]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#0a1420] to-transparent rounded-full blur-2xl pointer-events-none" />
+    <section id="inicio" className="relative bg-white text-slate-800 pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden border-b border-slate-200/80">
+      {/* Subtle Background Architectural Watermark */}
+      <div className="absolute inset-0 opacity-25 bg-[radial-gradient(#c5a880_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+      <div className="absolute -top-32 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-[#c5a880]/10 via-amber-50/40 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Core Positioning & Actions */}
           <div className="lg:col-span-7 space-y-7 text-left">
-            
+
             {/* Top Credential Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-[#C5A880]/40 text-xs text-white">
-              <Award className="w-4 h-4 text-[#D4AF37]" />
-              <span className="font-medium tracking-wide text-white">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50/80 border border-[#C5A880]/50 text-xs text-[#0D1B2A]">
+              <Award className="w-4 h-4 text-[#9C7A4A]" />
+              <span className="font-semibold tracking-wide text-[#0D1B2A]">
                 Experiencia Exfiscal · Más de 10 años en el Ministerio Público
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="font-serif-legal text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.18]">
+            <h1 className="font-serif-legal text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0D1B2A] leading-[1.18]">
               Seguridad Jurídica en{' '}
-              <span className="underline decoration-[#C5A880] decoration-2 underline-offset-4 text-white">
+              <span className="underline decoration-[#C5A880] decoration-2 underline-offset-4 text-[#0D1B2A]">
                 Titulación de Tierras, Bienes Raíces, Contratos
               </span>{' '}
               y Defensa Penal en Panamá
             </h1>
 
             {/* Lead Description */}
-            <p className="text-white text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
-              Despacho jurídico enfocado en brindar asesoría legal responsable, estratégica y comprometida con la defensa de sus derechos y patrimonio. Dirigido por la <strong className="text-white font-semibold">Licda. Mitzy I. García</strong>, abogada panameña con profundo dominio en titulación de tierras ante ANATI, bienes raíces, redacción y blindaje de contratos, y defensa penal estratégica.
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+              Despacho jurídico enfocado en brindar asesoría legal responsable, estratégica y comprometida con la defensa de sus derechos y patrimonio. Dirigido por la <strong className="text-[#0D1B2A] font-semibold">Licda. Mitzy I. García</strong>, abogada panameña con profundo dominio en titulación de tierras ante ANATI, bienes raíces, redacción y blindaje de contratos, y defensa penal estratégica.
             </p>
 
             {/* Quick Guarantees / Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-sm text-white">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-sm text-slate-700">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#9C7A4A] shrink-0" />
                 <span>Titulación de tierras ante ANATI y posesorios</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#9C7A4A] shrink-0" />
                 <span>Bienes raíces y auditoría registral de fincas</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#9C7A4A] shrink-0" />
                 <span>Contratos inmobiliarios, civiles y mercantiles</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#9C7A4A] shrink-0" />
                 <span>Defensa penal técnica · Presencial y Virtual</span>
               </div>
             </div>
@@ -71,7 +70,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-3">
               <button
                 onClick={onOpenBooking}
-                className="bg-gradient-to-r from-[#C5A880] via-[#D4AF37] to-[#B38A4D] hover:from-[#d6ba94] hover:to-[#c49a5b] text-[#0D1B2A] font-bold text-base px-7 py-3.5 rounded-lg shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2.5 cursor-pointer group"
+                className="bg-gradient-to-r from-[#C5A880] via-[#D4AF37] to-[#B38A4D] hover:from-[#d6ba94] hover:to-[#c49a5b] text-[#0D1B2A] font-bold text-base px-7 py-3.5 rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2.5 cursor-pointer group"
               >
                 <Calendar className="w-5 h-5 text-[#0D1B2A]" />
                 <span>Agendar Consulta Legal</span>
@@ -80,21 +79,21 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
 
               <a
                 href="#servicios"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg border border-slate-600 hover:border-[#C5A880] bg-slate-900/60 hover:bg-slate-800/80 text-white font-medium text-sm transition-all"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg border border-slate-300 hover:border-[#0D1B2A] bg-white hover:bg-slate-50 text-[#0D1B2A] font-semibold text-sm transition-all shadow-xs"
               >
                 Explorar Servicios
               </a>
 
               <button
                 onClick={onOpenCaseEvaluator}
-                className="text-xs text-white hover:text-[#E0C097] underline underline-offset-4 sm:ml-2 text-center cursor-pointer"
+                className="text-xs text-[#9C7A4A] hover:text-[#0D1B2A] font-semibold underline underline-offset-4 sm:ml-2 text-center cursor-pointer"
               >
                 ¿Dudas sobre su caso? Evaluar aquí
               </button>
             </div>
 
             {/* Team Avatars Trust Strip */}
-            <div className="pt-4 border-t border-slate-800/80 flex flex-wrap items-center gap-4">
+            <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center gap-4">
               <a href="#equipo" className="flex -space-x-2.5 overflow-hidden group">
                 {TEAM_MEMBERS.map((member) => (
                   <img
@@ -107,15 +106,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
                 ))}
               </a>
               <div className="text-xs">
-                <div className="font-semibold text-white flex items-center gap-2">
+                <div className="font-semibold text-[#0D1B2A] flex items-center gap-2">
                   <span>Cuerpo Jurídico de Exfiscales y Litigantes</span>
-                  <span className="text-[#D4AF37] font-bold">★★★★★</span>
+                  <span className="text-[#C5A880] font-bold">★★★★★</span>
                 </div>
                 <div className="flex items-center gap-2 mt-0.5">
-                  <span className="text-white/90 text-[11px]">
+                  <span className="text-slate-500 text-[11px]">
                     4 abogados especialistas colegiados en Panamá
                   </span>
-                  <a href="#equipo" className="text-[11px] text-white hover:text-[#E0C097] underline font-medium">
+                  <a href="#equipo" className="text-[11px] text-[#9C7A4A] hover:text-[#0D1B2A] underline font-semibold">
                     Conocer al equipo →
                   </a>
                 </div>
@@ -127,17 +126,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
           {/* Right Column: Founder Authority Card & Quick Stats */}
           <div className="lg:col-span-5">
             <div
-              className="relative bg-gradient-to-b from-slate-800/90 to-slate-900/95 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-sm text-white"
+              className="relative bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-xl ring-1 ring-[#C5A880]/25 text-slate-800"
             >
               {/* Gold Accent Corner */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#C5A880]/20 to-transparent rounded-tr-2xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#C5A880]/15 to-transparent rounded-tr-2xl pointer-events-none" />
 
               {/* Profile Header */}
-              <div className="flex items-start gap-4 pb-6 border-b border-slate-700/80">
+              <div className="flex items-start gap-4 pb-6 border-b border-slate-200">
                 <div className="relative shrink-0">
                   <div
                     onClick={onOpenPhotoUploader}
-                    className={`relative overflow-hidden rounded-2xl p-0.5 bg-gradient-to-b from-[#E0C097] via-[#C5A880] to-[#8C6D28] shadow-2xl ring-2 ring-[#C5A880]/30 ${
+                    className={`relative overflow-hidden rounded-2xl p-0.5 bg-gradient-to-b from-[#E0C097] via-[#C5A880] to-[#8C6D28] shadow-lg ring-2 ring-[#C5A880]/30 ${
                       onOpenPhotoUploader ? 'cursor-pointer hover:scale-105 transition-transform' : ''
                     }`}
                     title={onOpenPhotoUploader ? 'Gestionar foto oficial' : undefined}
@@ -153,16 +152,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-widest text-white/90 font-semibold">
+                  <div className="text-xs uppercase tracking-widest text-[#9C7A4A] font-bold">
                     Directora &amp; Socia Fundadora
                   </div>
-                  <h3 className="font-serif-legal text-xl font-bold text-white mt-0.5">
+                  <h3 className="font-serif-legal text-xl font-bold text-[#0D1B2A] mt-0.5">
                     Licda. Mitzy I. García
                   </h3>
-                  <p className="text-xs text-white/90 mt-1 leading-snug">
+                  <p className="text-xs text-slate-600 mt-1 leading-snug">
                     Abogada Litigante · Exfiscal del Ministerio Público de Panamá
                   </p>
-                  <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#C5A880]/20 border border-[#C5A880]/50 text-[10px] text-white font-semibold tracking-wider uppercase">
+                  <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-amber-50 border border-[#C5A880]/50 text-[10px] text-[#0D1B2A] font-semibold tracking-wider uppercase">
                     Titulación de Tierras · Bienes Raíces · Contratos · Defensa Penal
                   </div>
                 </div>
@@ -171,36 +170,36 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
               {/* Key Trajectory Highlights */}
               <div className="py-5 space-y-3.5 text-sm">
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-md bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 mt-0.5 text-[#C5A880]">
+                  <div className="w-7 h-7 rounded-md bg-amber-50 border border-[#C5A880]/40 flex items-center justify-center shrink-0 mt-0.5 text-[#9C7A4A]">
                     <Building className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="font-semibold text-white block">Titulación de Tierras &amp; Bienes Raíces</span>
-                    <span className="text-xs text-white/90">
+                    <span className="font-semibold text-[#0D1B2A] block">Titulación de Tierras &amp; Bienes Raíces</span>
+                    <span className="text-xs text-slate-600">
                       Titulación ante ANATI, regularización de derechos posesorios, auditoría registral de fincas y transacciones seguras en Panamá.
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-md bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 mt-0.5 text-[#C5A880]">
+                  <div className="w-7 h-7 rounded-md bg-amber-50 border border-[#C5A880]/40 flex items-center justify-center shrink-0 mt-0.5 text-[#9C7A4A]">
                     <FileText className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="font-semibold text-white block">Contratos &amp; Blindaje Patrimonial</span>
-                    <span className="text-xs text-white/90">
+                    <span className="font-semibold text-[#0D1B2A] block">Contratos &amp; Blindaje Patrimonial</span>
+                    <span className="text-xs text-slate-600">
                       Redacción, revisión y negociación de contratos de promesa y compraventa, arrendamientos y acuerdos comerciales.
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-md bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 mt-0.5 text-[#C5A880]">
+                  <div className="w-7 h-7 rounded-md bg-amber-50 border border-[#C5A880]/40 flex items-center justify-center shrink-0 mt-0.5 text-[#9C7A4A]">
                     <Shield className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="font-semibold text-white block">Defensa Penal · 10 Años Exfiscal</span>
-                    <span className="text-xs text-white/90">
+                    <span className="font-semibold text-[#0D1B2A] block">Defensa Penal · 10 Años Exfiscal</span>
+                    <span className="text-xs text-slate-600">
                       Investigación penal, audiencias de garantías y litigio estratégico en todas las etapas del Sistema Penal Acusatorio.
                     </span>
                   </div>
@@ -208,16 +207,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCaseEvaluator, 
               </div>
 
               {/* Direct Booking Highlight Box */}
-              <div className="bg-[#0A1420]/80 rounded-xl p-4 border border-[#C5A880]/40 flex items-center justify-between">
+              <div className="bg-slate-50 rounded-xl p-4 border border-[#C5A880]/40 flex items-center justify-between">
                 <div>
-                  <div className="text-xs text-white/80">¿Requiere orientación inmediata?</div>
-                  <div className="text-sm font-semibold text-white">
+                  <div className="text-xs text-slate-500">¿Requiere orientación inmediata?</div>
+                  <div className="text-sm font-semibold text-[#0D1B2A]">
                     Agenda disponible para esta semana
                   </div>
                 </div>
                 <button
                   onClick={onOpenBooking}
-                  className="bg-[#C5A880] hover:bg-[#D4AF37] text-[#0D1B2A] text-xs font-bold px-3.5 py-2 rounded shadow transition-colors cursor-pointer"
+                  className="bg-[#0D1B2A] hover:bg-[#1B263B] text-[#E0C097] text-xs font-bold px-3.5 py-2 rounded shadow transition-colors cursor-pointer"
                 >
                   Ver Horarios
                 </button>

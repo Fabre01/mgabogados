@@ -370,7 +370,7 @@ export const AppointmentLookupModal: React.FC<AppointmentLookupModalProps> = ({
               <span className="text-[11px] text-amber-900">Escríbanos directamente para asistencia inmediata</span>
             </div>
             <a
-              href="https://wa.me/50762348890"
+              href="https://wa.me/50761654038"
               target="_blank"
               rel="noreferrer"
               className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-1.5 rounded transition-colors"

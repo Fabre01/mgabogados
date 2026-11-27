@@ -119,11 +119,11 @@ export const LiveChatWidget: React.FC<LiveChatWidgetProps> = ({ onOpenBooking })
       return {
         id: 'reply-' + Date.now(),
         sender: 'attorney',
-        text: 'Para asuntos penales, la Licda. Mitzy I. García cuenta con 10 años de experiencia en el Ministerio Público investigando causas y actuando como fiscal. Las primeras horas son críticas ante el Juez de Garantías. Si se trata de una aprehensión o audiencia urgente, por favor comuníquese de inmediato a nuestra línea directa de urgencias penales (+507 6980-1122) o use WhatsApp directo.',
+        text: 'Para asuntos penales, la Licda. Mitzy I. García cuenta con 10 años de experiencia en el Ministerio Público investigando causas y actuando como fiscal. Las primeras horas son críticas ante el Juez de Garantías. Si se trata de una aprehensión o audiencia urgente, por favor comuníquese de inmediato a nuestra línea directa de urgencias penales (+507 6165-4038) o use WhatsApp directo.',
         timestamp: time,
         actionLink: {
-          label: 'Llamar a Urgencias: +507 6980-1122',
-          urlOrAction: 'tel:+50769801122'
+          label: 'Llamar a Urgencias: +507 6165-4038',
+          urlOrAction: 'tel:+50761654038'
         },
         quickReplies: ['Agendar cita penal', 'WhatsApp directo']
       };
@@ -171,7 +171,7 @@ export const LiveChatWidget: React.FC<LiveChatWidgetProps> = ({ onOpenBooking })
       return {
         id: 'reply-' + Date.now(),
         sender: 'assistant',
-        text: 'Puede agendar su cita de 60 minutos directamente en nuestro sistema interactivo. Atendemos tanto en modalidad Presencial (en Torre Financial Park, Ciudad de Panamá) como Virtual por Google Meet/Zoom para clientes en el interior o en el extranjero.',
+        text: 'Puede agendar su cita de 60 minutos directamente en nuestro sistema interactivo. Atendemos tanto en modalidad Presencial (en Buena Vista, Provincia de Colón) como Virtual por Google Meet/Zoom para clientes en todo el país o en el extranjero.',
         timestamp: time,
         quickReplies: ['Ir al sistema de reservas', 'Escribir por WhatsApp']
       };
@@ -182,7 +182,7 @@ export const LiveChatWidget: React.FC<LiveChatWidgetProps> = ({ onOpenBooking })
       return {
         id: 'reply-' + Date.now(),
         sender: 'assistant',
-        text: 'Nuestras oficinas están ubicadas en Torre Financial Park, Piso 18, Costa del Este / Calle 50, Ciudad de Panamá. Nuestro horario de oficina es de Lunes a Viernes de 8:00 AM a 5:30 PM (con atención penal de urgencia las 24 horas).',
+        text: 'Nuestras oficinas están ubicadas en la Provincia de Colón, a un costado de la Junta Comunal de Buena Vista. Nuestro horario de oficina es de Lunes a Viernes de 8:00 AM a 5:30 PM (con atención penal de urgencia las 24 horas).',
         timestamp: time,
         quickReplies: ['Ver en Google Maps', 'Agendar cita']
       };
@@ -208,7 +208,7 @@ export const LiveChatWidget: React.FC<LiveChatWidgetProps> = ({ onOpenBooking })
     }
     if (r.includes('whatsapp')) {
       const link = document.createElement('a');
-      link.href = 'https://wa.me/50762348890';
+      link.href = 'https://wa.me/50761654038';
       link.target = '_blank';
       link.rel = 'noreferrer';
       link.click();
@@ -216,7 +216,7 @@ export const LiveChatWidget: React.FC<LiveChatWidgetProps> = ({ onOpenBooking })
     }
     if (r.includes('maps') || r.includes('ubicación') || r.includes('ubicacion')) {
       const link = document.createElement('a');
-      link.href = 'https://maps.google.com/?q=Torre+Financial+Park+Costa+del+Este+Panama';
+      link.href = 'https://maps.google.com/?q=Junta+Comunal+de+Buena+Vista+Colon+Panama';
       link.target = '_blank';
       link.rel = 'noreferrer';
       link.click();
@@ -342,7 +342,7 @@ export const LiveChatWidget: React.FC<LiveChatWidgetProps> = ({ onOpenBooking })
             <div className="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
               <span className="text-slate-300">¿Prefiere chatear por WhatsApp?</span>
               <a
-                href="https://wa.me/50762348890"
+                href="https://wa.me/50761654038"
                 target="_blank"
                 rel="noreferrer"
                 className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1"

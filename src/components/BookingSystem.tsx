@@ -99,7 +99,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
 
     // Check if Sunday (0)
     if (checkDate.getDay() === 0) {
-      setErrorMsg('Los domingos el despacho atiende únicamente urgencias penales vía telefónica (+507 6980-1122).');
+      setErrorMsg('Los domingos el despacho atiende únicamente urgencias penales vía telefónica (+507 6165-4038).');
       return;
     }
 
@@ -167,19 +167,19 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
   };
 
   return (
-    <section id="reservas" className="py-20 lg:py-28 bg-[#0D1B2A] text-white">
+    <section id="reservas" className="py-20 lg:py-28 bg-white text-slate-800 border-t border-slate-200/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="text-xs uppercase tracking-widest text-[#E0C097] font-bold mb-2">
+          <div className="text-xs uppercase tracking-widest text-[#9C7A4A] font-bold mb-2">
             Atención Personalizada
           </div>
-          <h2 className="font-serif-legal text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          <h2 className="font-serif-legal text-3xl sm:text-4xl font-bold text-[#0D1B2A] tracking-tight">
             Sistema de Reserva de Citas Jurídicas
           </h2>
           <div className="w-20 h-1 bg-[#C5A880] mx-auto mt-3 mb-4 rounded-full" />
-          <p className="text-white/90 text-sm sm:text-base">
+          <p className="text-slate-600 text-sm sm:text-base">
             Seleccione la materia legal, elija entre modalidad presencial en nuestras oficinas o videollamada virtual, y confirme su fecha directamente con la agenda de la Licda. Mitzy I. García.
           </p>
 
@@ -187,7 +187,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
             <button
               type="button"
               onClick={onOpenLookupModal}
-              className="text-[#E0C097] hover:text-white font-semibold underline underline-offset-4 cursor-pointer transition-colors"
+              className="text-[#9C7A4A] hover:text-[#0D1B2A] font-semibold underline underline-offset-4 cursor-pointer transition-colors"
             >
               ¿Ya tiene una reserva? Consultar o reprogramar su cita aquí
             </button>
@@ -195,10 +195,10 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
         </div>
 
         {/* Stepper Card */}
-        <div className="bg-[#112236] rounded-2xl shadow-2xl border border-slate-700/80 overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
 
           {/* Progress Header */}
-          <div className="bg-[#0A1420] text-white px-6 py-4 flex flex-wrap items-center justify-between gap-4 border-b border-slate-700/80">
+          <div className="bg-[#0D1B2A] text-white px-6 py-4 flex flex-wrap items-center justify-between gap-4 border-b border-slate-800">
             <div className="flex items-center gap-2">
               <span className="w-8 h-8 rounded-full bg-[#C5A880] text-[#0D1B2A] font-bold flex items-center justify-center text-sm">
                 {step === 4 ? <Check className="w-4 h-4" /> : step}
@@ -207,7 +207,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                 <div className="text-xs uppercase tracking-wider text-[#C5A880] font-semibold">
                   Paso {step} de 3
                 </div>
-                <div className="text-sm font-medium text-white">
+                <div className="text-sm font-medium text-slate-200">
                   {step === 1 && 'Selección de Materia y Modalidad'}
                   {step === 2 && 'Fecha y Horario Disponible'}
                   {step === 3 && 'Información del Consultante'}
@@ -217,7 +217,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
             </div>
 
             {step < 4 && (
-              <div className="flex items-center gap-2 text-xs text-white/70">
+              <div className="flex items-center gap-2 text-xs text-slate-400">
                 <span className={step >= 1 ? 'text-[#E0C097] font-semibold' : ''}>1. Materia</span>
                 <span>›</span>
                 <span className={step >= 2 ? 'text-[#E0C097] font-semibold' : ''}>2. Fecha</span>
@@ -231,7 +231,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
           {step === 1 && (
             <div className="p-6 sm:p-10 space-y-8">
               <div>
-                <label className="block text-sm font-bold text-white uppercase tracking-wide mb-3">
+                <label className="block text-sm font-bold text-[#0D1B2A] uppercase tracking-wide mb-3">
                   1. Seleccione el Área o Asunto Legal *
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -242,17 +242,17 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                       onClick={() => setSelectedArea(area.id)}
                       className={`p-4 rounded-xl border text-left transition-all cursor-pointer ${
                         selectedArea === area.id
-                          ? 'border-[#C5A880] bg-[#162C46] ring-2 ring-[#C5A880]/60'
-                          : 'border-slate-700 hover:border-[#C5A880]/50 bg-[#0A1420]'
+                          ? 'border-[#0D1B2A] bg-amber-50/60 ring-2 ring-[#C5A880]'
+                          : 'border-slate-200 hover:border-slate-400 bg-white'
                       }`}
                     >
-                      <div className="font-serif-legal font-bold text-sm text-white flex items-center justify-between">
+                      <div className="font-serif-legal font-bold text-sm text-[#0D1B2A] flex items-center justify-between">
                         <span>{area.title}</span>
                         {selectedArea === area.id && (
-                          <Check className="w-4 h-4 text-[#E0C097]" />
+                          <Check className="w-4 h-4 text-[#9C7A4A]" />
                         )}
                       </div>
-                      <p className="text-xs text-white/80 mt-1 line-clamp-2">
+                      <p className="text-xs text-slate-500 mt-1 line-clamp-2">
                         {area.shortDesc}
                       </p>
                     </button>
@@ -262,7 +262,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
 
               {/* Attorney Selection with Photos */}
               <div>
-                <label className="block text-sm font-bold text-white uppercase tracking-wide mb-3">
+                <label className="block text-sm font-bold text-[#0D1B2A] uppercase tracking-wide mb-3">
                   2. Seleccione el Abogado/a de su Preferencia *
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -275,23 +275,23 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                         onClick={() => setSelectedAttorney(attorney.name)}
                         className={`p-3 rounded-xl border cursor-pointer transition-all flex items-center gap-3 ${
                           isSelected
-                            ? 'border-[#C5A880] bg-[#162C46] ring-2 ring-[#C5A880]/60 shadow-sm'
-                            : 'border-slate-700 hover:border-[#C5A880]/50 bg-[#0A1420]'
+                            ? 'border-[#0D1B2A] bg-amber-50/70 ring-2 ring-[#C5A880] shadow-sm'
+                            : 'border-slate-200 hover:border-slate-300 bg-white'
                         }`}
                       >
                         <img
                           src={attorneyImg}
                           alt={attorney.name}
-                          className="w-12 h-14 object-cover object-top rounded-lg border border-[#C5A880]/40 shrink-0"
+                          className="w-12 h-14 object-cover object-top rounded-lg border border-slate-300 shrink-0"
                         />
                         <div className="min-w-0 flex-1">
-                          <div className="text-xs font-bold text-white truncate">
+                          <div className="text-xs font-bold text-[#0D1B2A] truncate">
                             {attorney.name}
                           </div>
-                          <div className="text-[10px] text-[#E0C097] font-semibold truncate">
+                          <div className="text-[10px] text-[#9C7A4A] font-semibold truncate">
                             {attorney.role}
                           </div>
-                          <div className="text-[9px] text-white/75 truncate">
+                          <div className="text-[9px] text-slate-500 truncate">
                             {attorney.experienceTag}
                           </div>
                         </div>
@@ -303,7 +303,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
 
               {/* Modality Selection */}
               <div>
-                <label className="block text-sm font-bold text-white uppercase tracking-wide mb-3">
+                <label className="block text-sm font-bold text-[#0D1B2A] uppercase tracking-wide mb-3">
                   3. Elija la Modalidad de Atención *
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -312,20 +312,20 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                     onClick={() => setModality('presencial')}
                     className={`p-5 rounded-xl border cursor-pointer transition-all flex items-start gap-4 ${
                       modality === 'presencial'
-                        ? 'border-[#C5A880] bg-[#162C46] ring-2 ring-[#C5A880]/60'
-                        : 'border-slate-700 hover:border-[#C5A880]/50 bg-[#0A1420]'
+                        ? 'border-[#0D1B2A] bg-amber-50/60 ring-2 ring-[#C5A880]'
+                        : 'border-slate-200 hover:border-slate-300 bg-white'
                     }`}
                   >
-                    <div className="w-10 h-10 rounded-lg bg-[#0D1B2A] border border-[#C5A880]/40 text-[#E0C097] flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-[#0D1B2A] text-[#E0C097] flex items-center justify-center shrink-0">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="font-bold text-sm text-white flex items-center gap-2">
-                        Presencial en Despacho (Panamá)
-                        {modality === 'presencial' && <Check className="w-4 h-4 text-[#E0C097]" />}
+                      <div className="font-bold text-sm text-[#0D1B2A] flex items-center gap-2">
+                        Presencial en Despacho (Colón)
+                        {modality === 'presencial' && <Check className="w-4 h-4 text-[#9C7A4A]" />}
                       </div>
-                      <p className="text-xs text-white/80 mt-1">
-                        Torre Financial Park, Costa del Este / Calle 50. Sala de conferencias privada y confidencial.
+                      <p className="text-xs text-slate-600 mt-1">
+                        Provincia de Colón, a un costado de la Junta Comunal de Buena Vista. Atención privada y confidencial.
                       </p>
                     </div>
                   </div>
@@ -334,20 +334,20 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                     onClick={() => setModality('virtual')}
                     className={`p-5 rounded-xl border cursor-pointer transition-all flex items-start gap-4 ${
                       modality === 'virtual'
-                        ? 'border-[#C5A880] bg-[#162C46] ring-2 ring-[#C5A880]/60'
-                        : 'border-slate-700 hover:border-[#C5A880]/50 bg-[#0A1420]'
+                        ? 'border-[#0D1B2A] bg-amber-50/60 ring-2 ring-[#C5A880]'
+                        : 'border-slate-200 hover:border-slate-300 bg-white'
                     }`}
                   >
-                    <div className="w-10 h-10 rounded-lg bg-[#0D1B2A] border border-[#C5A880]/40 text-[#E0C097] flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-[#0D1B2A] text-[#E0C097] flex items-center justify-center shrink-0">
                       <Video className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="font-bold text-sm text-white flex items-center gap-2">
+                      <div className="font-bold text-sm text-[#0D1B2A] flex items-center gap-2">
                         Videollamada en Vivo (Zoom / Meet)
-                        {modality === 'virtual' && <Check className="w-4 h-4 text-[#E0C097]" />}
+                        {modality === 'virtual' && <Check className="w-4 h-4 text-[#9C7A4A]" />}
                       </div>
-                      <p className="text-xs text-white/80 mt-1">
-                        Ideal para clientes en el interior del país, extranjeros o inversionistas que residen fuera de Panamá.
+                      <p className="text-xs text-slate-600 mt-1">
+                        Ideal para clientes en todo el país, extranjeros o inversionistas que residen fuera de Panamá.
                       </p>
                     </div>
                   </div>
@@ -356,11 +356,11 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
               </div>
 
               {/* Next Step Button */}
-              <div className="pt-4 flex justify-end border-t border-slate-700/70">
+              <div className="pt-4 flex justify-end border-t border-slate-200">
                 <button
                   type="button"
                   onClick={() => setStep(2)}
-                  className="bg-gradient-to-r from-[#C5A880] to-[#A88550] hover:from-[#D4AF37] hover:to-[#B6935C] text-[#0D1B2A] font-bold text-sm px-8 py-3 rounded-lg shadow transition-all flex items-center gap-2 cursor-pointer"
+                  className="bg-[#0D1B2A] hover:bg-[#1B263B] text-[#E0C097] font-bold text-sm px-8 py-3 rounded-lg shadow transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>Continuar a Fecha y Hora</span>
                   <ChevronRight className="w-4 h-4" />
@@ -375,9 +375,9 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
                 {/* Custom Month Calendar */}
-                <div className="lg:col-span-7 bg-[#0A1420] p-6 rounded-xl border border-slate-700">
+                <div className="lg:col-span-7 bg-slate-50 p-6 rounded-xl border border-slate-200">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-serif-legal font-bold text-base text-white">
+                    <h3 className="font-serif-legal font-bold text-base text-[#0D1B2A]">
                       {monthNames[currentMonthDate.getMonth()]} {currentMonthDate.getFullYear()}
                     </h3>
                     <div className="flex items-center gap-1">
@@ -385,7 +385,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                         type="button"
                         onClick={() => setCalendarMonthOffset((prev) => Math.max(0, prev - 1))}
                         disabled={calendarMonthOffset === 0}
-                        className="p-1.5 rounded hover:bg-[#162C46] disabled:opacity-30 disabled:cursor-not-allowed text-white cursor-pointer"
+                        className="p-1.5 rounded hover:bg-slate-200 disabled:opacity-30 disabled:cursor-not-allowed text-slate-700 cursor-pointer"
                         aria-label="Mes anterior"
                       >
                         <ChevronLeft className="w-4 h-4" />
@@ -393,7 +393,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                       <button
                         type="button"
                         onClick={() => setCalendarMonthOffset((prev) => prev + 1)}
-                        className="p-1.5 rounded hover:bg-[#162C46] text-white cursor-pointer"
+                        className="p-1.5 rounded hover:bg-slate-200 text-slate-700 cursor-pointer"
                         aria-label="Siguiente mes"
                       >
                         <ChevronRight className="w-4 h-4" />
@@ -402,7 +402,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                   </div>
 
                   {/* Day Names */}
-                  <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-white/75 mb-2">
+                  <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-slate-500 mb-2">
                     <span>Dom</span>
                     <span>Lun</span>
                     <span>Mar</span>
@@ -443,10 +443,10 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                           onClick={() => handleDateSelect(dayNum)}
                           className={`h-10 rounded-lg flex items-center justify-center font-medium transition-all ${
                             isSelected
-                              ? 'bg-[#C5A880] text-[#0D1B2A] font-bold shadow-md'
+                              ? 'bg-[#0D1B2A] text-[#E0C097] font-bold shadow-md'
                               : isPast || isSunday
-                              ? 'text-slate-600 cursor-not-allowed'
-                              : 'hover:bg-[#162C46] text-white bg-[#112236] border border-slate-700/80 cursor-pointer'
+                              ? 'text-slate-300 cursor-not-allowed'
+                              : 'hover:bg-amber-100 text-slate-700 bg-white border border-slate-200 cursor-pointer'
                           }`}
                         >
                           {dayNum}
@@ -455,15 +455,15 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                     })}
                   </div>
 
-                  <div className="mt-4 text-[11px] text-white/80 flex items-center gap-4">
+                  <div className="mt-4 text-[11px] text-slate-500 flex items-center gap-4">
                     <span className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded bg-[#C5A880]" /> Seleccionado
+                      <span className="w-2.5 h-2.5 rounded bg-[#0D1B2A]" /> Seleccionado
                     </span>
                     <span className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded bg-[#112236] border border-slate-600" /> Disponible
+                      <span className="w-2.5 h-2.5 rounded bg-white border border-slate-300" /> Disponible
                     </span>
                     <span className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded bg-slate-700" /> No laborable
+                      <span className="w-2.5 h-2.5 rounded bg-slate-200" /> No laborable
                     </span>
                   </div>
                 </div>
@@ -471,11 +471,11 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                 {/* Time Slot Picker */}
                 <div className="lg:col-span-5 space-y-4">
                   <div>
-                    <h3 className="font-serif-legal font-bold text-base text-white mb-1">
+                    <h3 className="font-serif-legal font-bold text-base text-[#0D1B2A] mb-1">
                       Horarios Disponibles
                     </h3>
-                    <p className="text-xs text-white/80">
-                      Fecha: <span className="font-semibold text-white">{selectedDate}</span> (Sesión de 60 minutos)
+                    <p className="text-xs text-slate-500">
+                      Fecha: <span className="font-semibold text-slate-800">{selectedDate}</span> (Sesión de 60 minutos)
                     </p>
                   </div>
 
@@ -489,11 +489,11 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                           onClick={() => setSelectedSlot(slot)}
                           className={`p-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 border transition-all cursor-pointer ${
                             isSelected
-                              ? 'border-[#C5A880] bg-[#162C46] text-[#E0C097] shadow-sm ring-1 ring-[#C5A880]/60'
-                              : 'border-slate-700 hover:border-[#C5A880]/50 bg-[#0A1420] text-white'
+                              ? 'border-[#0D1B2A] bg-[#0D1B2A] text-[#E0C097] shadow-sm'
+                              : 'border-slate-200 hover:border-slate-400 bg-white text-slate-700'
                           }`}
                         >
-                          <Clock className="w-3.5 h-3.5 text-[#E0C097]" />
+                          <Clock className="w-3.5 h-3.5 text-[#9C7A4A]" />
                           <span>{slot}</span>
                         </button>
                       );
@@ -501,7 +501,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                   </div>
 
                   {/* Selected Attorney Box */}
-                  <div className="bg-[#0A1420] p-4 rounded-xl border border-[#C5A880]/40 text-xs text-white flex items-center gap-3">
+                  <div className="bg-amber-50/80 p-4 rounded-xl border border-amber-200 text-xs text-amber-950 flex items-center gap-3">
                     <img
                       src={
                         (selectedAttorney.includes('Mitzy') ? getMitzyPhoto() : TEAM_MEMBERS.find((t) => t.name === selectedAttorney)?.image) ||
@@ -511,16 +511,16 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                       className="w-12 h-14 object-cover object-top rounded-lg border border-[#C5A880] shrink-0 shadow-xs"
                     />
                     <div className="min-w-0">
-                      <span className="text-[10px] text-white/70 uppercase tracking-wider block">
+                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">
                         Abogado/a asignado para su cita:
                       </span>
-                      <strong className="text-white block text-xs truncate">
+                      <strong className="text-slate-900 block text-xs truncate">
                         {selectedAttorney}
                       </strong>
-                      <span className="text-[11px] text-[#E0C097] font-semibold block truncate">
+                      <span className="text-[11px] text-[#9C7A4A] font-semibold block truncate">
                         {TEAM_MEMBERS.find((t) => t.name === selectedAttorney)?.role || 'Directora'}
                       </span>
-                      <p className="text-white/75 text-[10px] mt-0.5 truncate">
+                      <p className="text-slate-600 text-[10px] mt-0.5 truncate">
                         {TEAM_MEMBERS.find((t) => t.name === selectedAttorney)?.experienceTag ||
                           'Exfiscal del Ministerio Público'}
                       </p>
@@ -531,18 +531,18 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
               </div>
 
               {errorMsg && (
-                <div className="p-3 bg-amber-950/70 border border-amber-500/40 text-amber-200 text-xs rounded-lg flex items-center gap-2">
-                  <AlertCircle className="w-4 h-4 text-amber-400 shrink-0" />
+                <div className="p-3 bg-amber-50 border border-amber-200 text-amber-900 text-xs rounded-lg flex items-center gap-2">
+                  <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
                   <span>{errorMsg}</span>
                 </div>
               )}
 
               {/* Navigation buttons */}
-              <div className="pt-4 flex items-center justify-between border-t border-slate-700/70">
+              <div className="pt-4 flex items-center justify-between border-t border-slate-200">
                 <button
                   type="button"
                   onClick={() => setStep(1)}
-                  className="px-5 py-2.5 text-xs font-semibold text-white/80 hover:text-white flex items-center gap-1 cursor-pointer transition-colors"
+                  className="px-5 py-2.5 text-xs font-semibold text-slate-600 hover:text-slate-900 flex items-center gap-1 cursor-pointer transition-colors"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   <span>Volver al paso anterior</span>
@@ -550,7 +550,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                 <button
                   type="button"
                   onClick={() => setStep(3)}
-                  className="bg-gradient-to-r from-[#C5A880] to-[#A88550] hover:from-[#D4AF37] hover:to-[#B6935C] text-[#0D1B2A] font-bold text-sm px-8 py-3 rounded-lg shadow transition-all flex items-center gap-2 cursor-pointer"
+                  className="bg-[#0D1B2A] hover:bg-[#1B263B] text-[#E0C097] font-bold text-sm px-8 py-3 rounded-lg shadow transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>Continuar a Datos del Cliente</span>
                   <ChevronRight className="w-4 h-4" />
@@ -564,26 +564,26 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
             <form onSubmit={handleSubmitBooking} className="p-6 sm:p-10 space-y-6">
 
               {/* Summary Pill Bar */}
-              <div className="p-4 bg-[#0A1420] rounded-xl border border-slate-700 text-xs text-white flex flex-wrap items-center justify-between gap-3">
+              <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-800 flex flex-wrap items-center justify-between gap-3">
                 <div className="flex items-center gap-2">
-                  <CalendarIcon className="w-4 h-4 text-[#E0C097]" />
+                  <CalendarIcon className="w-4 h-4 text-[#9C7A4A]" />
                   <span>
                     <strong>Fecha:</strong> {selectedDate} a las {selectedSlot}
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-[#E0C097]" />
+                  <MapPin className="w-4 h-4 text-[#9C7A4A]" />
                   <span>
-                    <strong>Modalidad:</strong> {modality === 'presencial' ? 'Presencial en Panamá' : 'Videollamada en Vivo'}
+                    <strong>Modalidad:</strong> {modality === 'presencial' ? 'Presencial en Buena Vista, Colón' : 'Videollamada en Vivo'}
                   </span>
                 </div>
-                <div className="text-white/90">
+                <div className="text-slate-600">
                   <strong>Materia:</strong> {PRACTICE_AREAS.find((a) => a.id === selectedArea)?.title}
                 </div>
               </div>
 
               {errorMsg && (
-                <div className="p-3 bg-rose-950/80 border border-rose-500/40 text-rose-200 text-xs rounded-lg flex items-center gap-2">
+                <div className="p-3 bg-rose-50 border border-rose-200 text-rose-800 text-xs rounded-lg flex items-center gap-2">
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   <span>{errorMsg}</span>
                 </div>
@@ -591,76 +591,76 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-bold text-white uppercase tracking-wide mb-1.5">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">
                     Nombre y Apellido Completo *
                   </label>
                   <div className="relative">
-                    <User className="w-4 h-4 text-[#E0C097] absolute left-3 top-3" />
+                    <User className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
                     <input
                       type="text"
                       required
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder="Ej. Roberto Alemán Sánchez"
-                      className="w-full pl-9 pr-3 py-2.5 text-sm bg-[#0A1420] text-white placeholder-slate-400 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C5A880] focus:border-transparent"
+                      className="w-full pl-9 pr-3 py-2.5 text-sm bg-white text-slate-800 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C5A880] focus:border-transparent"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-white uppercase tracking-wide mb-1.5">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">
                     Cédula de Identidad o Pasaporte *
                   </label>
                   <div className="relative">
-                    <FileText className="w-4 h-4 text-[#E0C097] absolute left-3 top-3" />
+                    <FileText className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
                     <input
                       type="text"
                       required
                       value={idDocument}
                       onChange={(e) => setIdDocument(e.target.value)}
                       placeholder="Ej. 8-745-1290 o Pasaporte"
-                      className="w-full pl-9 pr-3 py-2.5 text-sm bg-[#0A1420] text-white placeholder-slate-400 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C5A880] focus:border-transparent"
+                      className="w-full pl-9 pr-3 py-2.5 text-sm bg-white text-slate-800 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C5A880] focus:border-transparent"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-white uppercase tracking-wide mb-1.5">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">
                     Correo Electrónico *
                   </label>
                   <div className="relative">
-                    <Mail className="w-4 h-4 text-[#E0C097] absolute left-3 top-3" />
+                    <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
                     <input
                       type="email"
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="nombre@correo.com"
-                      className="w-full pl-9 pr-3 py-2.5 text-sm bg-[#0A1420] text-white placeholder-slate-400 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C5A880] focus:border-transparent"
+                      className="w-full pl-9 pr-3 py-2.5 text-sm bg-white text-slate-800 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C5A880] focus:border-transparent"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-white uppercase tracking-wide mb-1.5">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">
                     Teléfono Celular / WhatsApp *
                   </label>
                   <div className="relative">
-                    <Phone className="w-4 h-4 text-[#E0C097] absolute left-3 top-3" />
+                    <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
                     <input
                       type="tel"
                       required
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      placeholder="+507 6234-8890"
-                      className="w-full pl-9 pr-3 py-2.5 text-sm bg-[#0A1420] text-white placeholder-slate-400 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C5A880] focus:border-transparent"
+                      placeholder="+507 6165-4038"
+                      className="w-full pl-9 pr-3 py-2.5 text-sm bg-white text-slate-800 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C5A880] focus:border-transparent"
                     />
                   </div>
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-white uppercase tracking-wide mb-1.5">
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">
                   Breve Resumen o Antecedentes del Asunto Legal (Confidencial)
                 </label>
                 <textarea
@@ -668,7 +668,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                   placeholder="Describa brevemente la situación (ej. Titulación ANATI, revisión de promesa de compraventa, contrato o defensa penal)"
-                  className="w-full p-3 text-sm bg-[#0A1420] text-white placeholder-slate-400 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C5A880] focus:border-transparent"
+                  className="w-full p-3 text-sm bg-white text-slate-800 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C5A880] focus:border-transparent"
                 />
               </div>
 
@@ -678,18 +678,18 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                   id="termsCheck"
                   checked={acceptTerms}
                   onChange={(e) => setAcceptTerms(e.target.checked)}
-                  className="mt-1 accent-[#C5A880] rounded cursor-pointer"
+                  className="mt-1 accent-[#0D1B2A] rounded cursor-pointer"
                 />
-                <label htmlFor="termsCheck" className="text-xs text-white/85 cursor-pointer">
+                <label htmlFor="termsCheck" className="text-xs text-slate-600 cursor-pointer">
                   Confirmo que los datos proporcionados son verídicos y acepto la política de confidencialidad y tratamiento de datos del Despacho MG Abogados &amp; Consultores · Tierras &amp; Bienes Raíces.
                 </label>
               </div>
 
-              <div className="pt-4 flex items-center justify-between border-t border-slate-700/70">
+              <div className="pt-4 flex items-center justify-between border-t border-slate-200">
                 <button
                   type="button"
                   onClick={() => setStep(2)}
-                  className="px-5 py-2.5 text-xs font-semibold text-white/80 hover:text-white flex items-center gap-1 cursor-pointer transition-colors"
+                  className="px-5 py-2.5 text-xs font-semibold text-slate-600 hover:text-slate-900 flex items-center gap-1 cursor-pointer transition-colors"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   <span>Modificar Fecha</span>
@@ -709,44 +709,44 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
           {/* Step 4: Success & Confirmation Ticket */}
           {step === 4 && createdAppointment && (
             <div className="p-6 sm:p-10 space-y-8 text-center">
-              <div className="w-16 h-16 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto shadow-inner">
+              <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto shadow-inner">
                 <Check className="w-8 h-8" />
               </div>
 
               <div className="max-w-xl mx-auto">
-                <div className="text-xs font-bold uppercase tracking-wider text-[#E0C097] mb-1">
+                <div className="text-xs font-bold uppercase tracking-wider text-[#9C7A4A] mb-1">
                   Reserva Registrada Exitosamente
                 </div>
-                <h3 className="font-serif-legal text-2xl sm:text-3xl font-bold text-white">
+                <h3 className="font-serif-legal text-2xl sm:text-3xl font-bold text-[#0D1B2A]">
                   ¡Cita Confirmada con {createdAppointment.attorney || 'Licda. Mitzy I. García'}!
                 </h3>
-                <p className="text-sm text-white/85 mt-2">
+                <p className="text-sm text-slate-600 mt-2">
                   Hemos generado su expediente provisional y agendado la fecha seleccionada en el despacho.
                 </p>
               </div>
 
               {/* Receipt Ticket Card */}
-              <div className="max-w-lg mx-auto bg-[#0A1420] border-2 border-dashed border-[#C5A880] rounded-2xl p-6 text-left shadow-sm relative overflow-hidden">
+              <div className="max-w-lg mx-auto bg-white border-2 border-dashed border-[#C5A880] rounded-2xl p-6 text-left shadow-sm relative overflow-hidden">
                 {/* Subtle watermark seal */}
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 w-48 h-48 opacity-10 pointer-events-none">
                   <Logo size="xl" rounded="2xl" className="w-full h-full" />
                 </div>
 
-                <div className="flex items-center justify-between border-b border-slate-700 pb-3 mb-4">
+                <div className="flex items-center justify-between border-b border-slate-200 pb-3 mb-4">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-xl bg-white border border-[#C5A880]/50 p-1 flex items-center justify-center shrink-0 shadow-xs overflow-hidden">
                       <Logo size="sm" rounded="lg" className="w-full h-full" />
                     </div>
                     <div>
-                      <span className="text-[10px] uppercase tracking-wider text-white/70 block">Expediente de Cita</span>
-                      <span className="font-mono text-lg font-bold text-[#E0C097]">
+                      <span className="text-[10px] uppercase tracking-wider text-slate-500 block">Expediente de Cita</span>
+                      <span className="font-mono text-lg font-bold text-[#0D1B2A]">
                         {createdAppointment.code}
                       </span>
                     </div>
                   </div>
                   <div className="text-right">
-                    <span className="text-[10px] uppercase tracking-wider text-emerald-400 font-semibold block">Estatus</span>
-                    <span className="text-xs font-bold text-emerald-300 bg-emerald-950/70 px-2.5 py-0.5 rounded-full border border-emerald-500/40">
+                    <span className="text-[10px] uppercase tracking-wider text-emerald-700 font-semibold block">Estatus</span>
+                    <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
                       Confirmada
                     </span>
                   </div>
@@ -754,30 +754,30 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
 
                 <div className="grid grid-cols-2 gap-4 text-xs">
                   <div>
-                    <span className="text-white/70 block">Consultante:</span>
-                    <strong className="text-white">{createdAppointment.fullName}</strong>
+                    <span className="text-slate-500 block">Consultante:</span>
+                    <strong className="text-slate-900">{createdAppointment.fullName}</strong>
                   </div>
                   <div>
-                    <span className="text-white/70 block">Documento:</span>
-                    <strong className="text-white">{createdAppointment.idDocument}</strong>
+                    <span className="text-slate-500 block">Documento:</span>
+                    <strong className="text-slate-900">{createdAppointment.idDocument}</strong>
                   </div>
                   <div>
-                    <span className="text-white/70 block">Fecha y Hora:</span>
-                    <strong className="text-white">{createdAppointment.date} · {createdAppointment.timeSlot}</strong>
+                    <span className="text-slate-500 block">Fecha y Hora:</span>
+                    <strong className="text-slate-900">{createdAppointment.date} · {createdAppointment.timeSlot}</strong>
                   </div>
                   <div>
-                    <span className="text-white/70 block">Modalidad:</span>
-                    <strong className="text-white">
-                      {createdAppointment.modality === 'presencial' ? 'Presencial (Costa del Este)' : 'Videollamada en Vivo'}
+                    <span className="text-slate-500 block">Modalidad:</span>
+                    <strong className="text-slate-900">
+                      {createdAppointment.modality === 'presencial' ? 'Presencial (Buena Vista, Colón)' : 'Videollamada en Vivo'}
                     </strong>
                   </div>
                   <div className="col-span-2">
-                    <span className="text-white/70 block">Materia:</span>
-                    <strong className="text-white">
+                    <span className="text-slate-500 block">Materia:</span>
+                    <strong className="text-slate-900">
                       {PRACTICE_AREAS.find((a) => a.id === createdAppointment.practiceArea)?.title}
                     </strong>
                   </div>
-                  <div className="col-span-2 pt-2 border-t border-slate-700/80 flex items-center gap-3">
+                  <div className="col-span-2 pt-2 border-t border-slate-200/80 flex items-center gap-3">
                     <img
                       src={
                         (createdAppointment.attorney.includes('Mitzy') ? getMitzyPhoto() : TEAM_MEMBERS.find((t) => t.name === createdAppointment.attorney)?.image) ||
@@ -787,9 +787,9 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                       className="w-11 h-13 object-cover object-[50%_15%] rounded-lg border border-[#C5A880]/60 shadow-xs"
                     />
                     <div>
-                      <span className="text-[10px] text-white/70 uppercase block">Abogado/a Asignado:</span>
-                      <strong className="text-white text-xs block">{createdAppointment.attorney}</strong>
-                      <span className="text-[10px] text-[#E0C097] font-medium">
+                      <span className="text-[10px] text-slate-500 uppercase block">Abogado/a Asignado:</span>
+                      <strong className="text-slate-900 text-xs block">{createdAppointment.attorney}</strong>
+                      <span className="text-[10px] text-[#9C7A4A] font-medium">
                         {TEAM_MEMBERS.find((t) => t.name === createdAppointment.attorney)?.role || 'Especialista'}
                       </span>
                     </div>
@@ -802,9 +802,9 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                 <button
                   type="button"
                   onClick={() => downloadICSFile(createdAppointment)}
-                  className="flex-1 bg-[#0A1420] hover:bg-[#162C46] border border-slate-600 text-white text-xs font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 shadow-sm transition-colors cursor-pointer"
+                  className="flex-1 bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 text-xs font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 shadow-sm transition-colors cursor-pointer"
                 >
-                  <Download className="w-4 h-4 text-[#E0C097]" />
+                  <Download className="w-4 h-4 text-[#9C7A4A]" />
                   <span>Descargar Calendario (.ICS)</span>
                 </button>
 
@@ -812,9 +812,9 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                   href={generateGoogleCalendarUrl(createdAppointment)}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex-1 bg-[#0A1420] hover:bg-[#162C46] border border-slate-600 text-white text-xs font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 shadow-sm transition-colors"
+                  className="flex-1 bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 text-xs font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 shadow-sm transition-colors"
                 >
-                  <ExternalLink className="w-4 h-4 text-[#E0C097]" />
+                  <ExternalLink className="w-4 h-4 text-[#9C7A4A]" />
                   <span>Añadir a Google Calendar</span>
                 </a>
               </div>
@@ -831,11 +831,11 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                 </a>
               </div>
 
-              <div className="pt-4 border-t border-slate-700/70">
+              <div className="pt-4 border-t border-slate-200">
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="text-xs text-white/80 hover:text-white underline cursor-pointer"
+                  className="text-xs text-slate-500 hover:text-slate-800 underline cursor-pointer"
                 >
                   Agendar otra consulta legal
                 </button>

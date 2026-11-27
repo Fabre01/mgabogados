@@ -20,12 +20,12 @@ export const ATTORNEY_PROFILE = {
     { title: 'Contratos & Blindaje Legal', desc: 'Redacción y revisión de contratos de promesa y compraventa, arrendamientos y acuerdos mercantiles.' },
     { title: 'Defensa Penal Estratégica', desc: 'Más de 10 años de experiencia exfiscal en el Sistema Penal Acusatorio (SPA) y litigación oral.' }
   ],
-  officeAddress: 'Torre Financial Park, Piso 18, Costa del Este / Calle 50, Ciudad de Panamá',
+  officeAddress: 'Provincia de Colón, a un costado de la Junta Comunal de Buena Vista',
   phones: {
-    mobile: '+507 6234-8890',
-    emergency24: '+507 6980-1122'
+    mobile: '+507 6165-4038',
+    emergency24: '+507 6165-4038'
   },
-  email: 'contacto@mgabogadospanama.com',
+  email: 'info@mglegalpa.com',
   schedule: 'Lunes a Viernes: 8:00 AM – 5:30 PM (Atención Inmediata para Urgencias Penales)'
 };
 

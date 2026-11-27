@@ -43,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-2 text-slate-300">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="font-medium text-slate-200">Despacho Jurídico en Ciudad de Panamá</span>
+            <span className="font-medium text-slate-200">Despacho Jurídico en Provincia de Colón</span>
             <span className="hidden md:inline text-slate-500">·</span>
             <span className="hidden md:inline text-slate-400">Dirigido por Licda. Mitzy I. García (Exfiscal del Ministerio Público)</span>
           </div>
@@ -58,11 +58,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             <span className="text-slate-600">|</span>
             <a
-              href="tel:+50769801122"
+              href="tel:+50761654038"
               className="text-amber-300 hover:text-amber-200 font-semibold flex items-center gap-1 transition-colors"
             >
               <ShieldAlert className="w-3.5 h-3.5 text-amber-400" />
-              <span>Urgencias Penales: +507 6980-1122</span>
+              <span>Urgencias Penales: +507 6165-4038</span>
             </a>
           </div>
         </div>
@@ -184,7 +184,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 🔍 Consultar o cancelar cita previa
               </button>
               <a
-                href="https://wa.me/50762348890"
+                href="https://wa.me/50761654038"
                 target="_blank"
                 rel="noreferrer"
                 className="block text-center py-2.5 bg-emerald-700/80 hover:bg-emerald-600 text-white rounded text-sm font-medium mt-2"

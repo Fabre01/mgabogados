@@ -92,7 +92,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0D1B2A] text-white">
+    <div className="min-h-screen flex flex-col bg-white text-slate-800">
       {/* Navbar with brand, emergency line & actions */}
       <Navbar
         onOpenBooking={() => handleScrollToBooking()}
